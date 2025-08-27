@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "audiodl"
+version = "0.1.0"
+description = ""
+authors = ["Skylar Widman <skylarkwidman@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+torch = {version = "*", source = "pytorch"}
+torchvision = {version = "*", source = "pytorch"}
+torchaudio = {version = "*", source = "pytorch"}
+soundfile = "*"
+ipykernel = "^6.30.1"
+jupyterlab = "^4.4.6"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
